@@ -3,7 +3,7 @@
  * configuration file
  */
 
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
+error_reporting(E_ALL);//E_ERROR | E_WARNING | E_PARSE);
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT_DIR', realpath($_SERVER['DOCUMENT_ROOT']) . DS);
 define('CORE_DIR', ROOT_DIR . 'core' . DS);
@@ -16,7 +16,7 @@ if(count($arr = explode('.', $_SERVER['HTTP_HOST'])) > 2) {
     )) ? 'frontend' : $sub_domain;
 
 } else {
-    $project = 'frontend';
+    $project = 'backend';
 }
 define('MAIN_SITE_DIR', 'http://' . str_replace('http://', '', implode('.', $arr) . '/'));
 define('PROJECT', $project);
@@ -27,7 +27,7 @@ define('IMAGE_DIR', SITE_DIR . '/images/' . PROJECT . '/');
 define('DEVELOPMENT_MODE', true);
 
 
-define('DB_NAME', 'auto_db');
+define('DB_NAME', 'guideline');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');
