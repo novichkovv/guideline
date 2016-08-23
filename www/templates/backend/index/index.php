@@ -45,7 +45,7 @@
         </div>
     </div>
     <div id="result_container">
-        <?php require_once TEMPLATE_DIR . 'index' . DS . 'ajax' . DS . 'result.php'; ?>
+<!--        --><?php //require_once TEMPLATE_DIR . 'index' . DS . 'ajax' . DS . 'result.php'; ?>
     </div>
 </div>
 <script type="text/javascript">
