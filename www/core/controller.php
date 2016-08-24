@@ -28,30 +28,9 @@ abstract class controller extends base
 
     function __construct($controller, $action)
     {
-        if(isset($_POST['log_out'])) {
-            $this->logOut();
-            header('Location: ' . SITE_DIR);
-            exit;
-        }
-        if(isset($_POST['login_btn'])) {
-            if($this->auth($_POST['email'], md5($_POST['user_password']), $_POST['remember'])) {
-                header('Location: ' . SITE_DIR);
-                exit;
-            } else {
-                $this->render('error', true);
-            }
-        }
         registry::set('log', array());
         $this->controller_name = $controller;
         $this->check_auth = $this->checkAuth();
-        if(PROJECT != 'frontend' && !$this->check_auth and !in_array($controller, array('common_controller', 'index_controller', 'api_controller'))) {
-            header('Location: ' . SITE_DIR);
-            exit;
-        }
-        if($this->check_auth)
-        {
-            $this->sidebar();
-        }
         $this->init();
         $this->action_name = $action . ($this->check_auth ? '_na' : '');
     }

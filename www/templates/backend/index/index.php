@@ -26,7 +26,7 @@
                         <!--                    </option>-->
                         <!--                --><?php //endforeach; ?>
                     </select>
-                    <img class="select-caret" src="<?php echo SITE_DIR; ?>images/caret-dis.png">
+                    <img class="select-caret" src="<?php echo SITE_DIR; ?>images/caret.png">
                 </div>
                 <div class="clearfix"></div>
                 <div class="form-group">
@@ -38,7 +38,7 @@
                         <!--                    </option>-->
                         <!--                --><?php //endforeach; ?>
                     </select>
-                    <img class="select-caret" src="<?php echo SITE_DIR; ?>images/caret-dis.png">
+                    <img class="select-caret" src="<?php echo SITE_DIR; ?>images/caret.png">
                 </div>
                 <div class="clearfix"></div>
                 <div class="form-group">
@@ -50,7 +50,7 @@
                         <!--                    </option>-->
                         <!--                --><?php //endforeach; ?>
                     </select>
-                    <img class="select-caret" src="<?php echo SITE_DIR; ?>images/caret-dis.png">
+                    <img class="select-caret" src="<?php echo SITE_DIR; ?>images/caret.png">
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -69,15 +69,15 @@
             $select.html('<option value="">Select Guideline</option>');
             var $topic = $("#topic_select");
             var $chapter = $("#chapter_select");
-            var $caret = $select.closest('.form-group').find('.select-caret');
+//            /var $caret = $select.closest('.form-group').find('.select-caret');
             if(!id) {
                 $select.prop('disabled', true);
-                $caret.attr('src', '<?php echo SITE_DIR; ?>images/caret-dis.png');
+//                $caret.attr('src', '<?php //echo SITE_DIR; ?>//images/caret-dis.png');
                 $chapter.html('<option value="">Select Chapter</option>');
-                $chapter.closest('.form-group').find('.select-caret').attr('src', '<?php echo SITE_DIR; ?>images/caret-dis.png');
+//                $chapter.closest('.form-group').find('.select-caret').attr('src', '<?php //echo SITE_DIR; ?>//images/caret-dis.png');
                 $chapter.prop('disabled', true);
                 $topic.html('<option value="">Select topic</option>');
-                $topic.closest('.form-group').find('.select-caret').attr('src', '<?php echo SITE_DIR; ?>images/caret-dis.png');
+//                $topic.closest('.form-group').find('.select-caret').attr('src', '<?php //echo SITE_DIR; ?>//images/caret-dis.png');
                 $topic.prop('disabled', true);
 
                 $("#result_container").html('');
@@ -94,14 +94,14 @@
                                         $select.append('<option value="' + respond.result[i].id + '">' + respond.result[i].guideline_name + '</option>')
                                     }
                                     $select.prop('disabled', false);
-                                    $caret.attr('src', '<?php echo SITE_DIR; ?>images/caret.png');
+//                                    $caret.attr('src', '<?php //echo SITE_DIR; ?>//images/caret.png');
 
 
                                     $chapter.html('<option value="">Select Chapter</option>');
-                                    $chapter.closest('.form-group').find('.select-caret').attr('src', '<?php echo SITE_DIR; ?>images/caret-dis.png');
+//                                    $chapter.closest('.form-group').find('.select-caret').attr('src', '<?php //echo SITE_DIR; ?>//images/caret-dis.png');
                                     $chapter.prop('disabled', true);
                                     $topic.html('<option value="">Select topic</option>');
-                                    $topic.closest('.form-group').find('.select-caret').attr('src', '<?php echo SITE_DIR; ?>images/caret-dis.png');
+//                                    $topic.closest('.form-group').find('.select-caret').attr('src', '<?php //echo SITE_DIR; ?>//images/caret-dis.png');
                                     $topic.prop('disabled', true);
                                 }
                             },
@@ -120,13 +120,13 @@
             var id = $(this).val();
             var $select = $("#chapter_select");
             $select.html('<option value="">Select Chapter</option>');
-            var $caret = $select.closest('.form-group').find('.select-caret');
+//            var $caret = $select.closest('.form-group').find('.select-caret');
             var $topic = $("#topic_select");
             if(!id) {
                 $select.prop('disabled', true);
-                $caret.attr('src', '<?php echo SITE_DIR; ?>images/caret-dis.png');
+//                $caret.attr('src', '<?php //echo SITE_DIR; ?>//images/caret-dis.png');
                 $topic.html('<option value="">Select topic</option>');
-                $topic.closest('.form-group').find('.select-caret').attr('src', '<?php echo SITE_DIR; ?>images/caret-dis.png');
+//                $topic.closest('.form-group').find('.select-caret').attr('src', '<?php //echo SITE_DIR; ?>//images/caret-dis.png');
                 $topic.prop('disabled', true);
                 $("#result_container").html('');
             } else {
@@ -143,9 +143,9 @@
                                         $select.append('<option value="' + respond.result[i].id + '">' + respond.result[i].chapter_name + '</option>')
                                     }
                                     $select.prop('disabled', false);
-                                    $caret.attr('src', '<?php echo SITE_DIR; ?>images/caret.png');
+//                                    $caret.attr('src', '<?php //echo SITE_DIR; ?>//images/caret.png');
                                     $topic.html('<option value="">Select topic</option>');
-                                    $topic.closest('.form-group').find('.select-caret').attr('src', '<?php echo SITE_DIR; ?>images/caret-dis.png');
+//                                    $topic.closest('.form-group').find('.select-caret').attr('src', '<?php //echo SITE_DIR; ?>//images/caret-dis.png');
                                     $topic.prop('disabled', true);
                                 }
                             },
@@ -162,7 +162,7 @@
             var id = $(this).val();
             var $select = $("#topic_select");
             $select.html('<option value="">Select Topic</option>');
-            var $caret = $select.closest('.form-group').find('.select-caret');
+//            var $caret = $select.closest('.form-group').find('.select-caret');
             $("#result_container").html('');
             var params = {
                 'action': 'get_topics',
@@ -176,7 +176,7 @@
                                     $select.append('<option value="' + respond.result[i].id + '">' + respond.result[i].topic_name + '</option>')
                                 }
                                 $select.prop('disabled', false);
-                                $caret.attr('src', '<?php echo SITE_DIR; ?>images/caret.png');
+//                                $caret.attr('src', '<?php //echo SITE_DIR; ?>//images/caret.png');
                             }
                         },
                         function (respond) { //fail
@@ -205,6 +205,11 @@
             ajax(params);
         });
 
+        $("body").on("click", ".select-caret", function () {
+            $(this).closest('.form-group').find('select').focus();
+            console.log($(this).closest('.form-group').find('select'));
+        });
+
 //        $('#category_select').bootstrapSelectToButton({
 //            iconTemplate: '<span class="caret"></span>'
 //        });
@@ -219,9 +224,9 @@
         padding: 35px 30px;
         min-height: 600px;
     }
-    .side-select {
+    .side-select, .side-select:focus, .side-select:active, .side-select:hover, .side-select[disabled] {
         background-color: #26375c;
-        height: 45px;
+        height: 43px;
         color: #fff;
         box-shadow: none;
         border-radius: 0;
@@ -229,13 +234,18 @@
         float: left;
         border: none;
         margin-bottom: 15px;
+        border-top: 1px solid #636f8a;
+        border-bottom: #e0e2e8;
+        0 0 1px #d4d4d4;
+
     }
     .select-caret {
-        margin-top: 11px;
+        /*margin-top: 11px;*/
+        margin-left: -50px;
     }
     .side-select[disabled] {
-        background-color: #677ead;
-        color: #ccc;
+        /*background-color: #677ead;*/
+        color: #949494;
     }
     .nav-pills>li {
         width: 33%;

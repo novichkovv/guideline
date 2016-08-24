@@ -10,12 +10,6 @@ class index_controller extends controller
     public function index()
     {
         $this->render('categories', $this->model('guideline_category')->getAll());
-//        $this->render('categories', $this->model('guideline_topic')->getAll());
-//        $this->render('categories', $this->model('guideline_chapter')->getAll());
-//        $this->render('categories', $this->model('guideline_category')->getAll());
-        $this->render('topic', $this->model('guideline_topic')->getById(2));
-        $this->render('content', $this->model('guideline_content')->getByField('topic_id', 2));
-        $this->render('recommendations', $this->model('guideline_recommendations')->getByField('topic_id', 2, true));
         $this->view('index' . DS . 'index');
     }
 
