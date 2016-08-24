@@ -1,4 +1,4 @@
-<div style="height: 100px;">
+<div style="height: 60px;">
 
 </div>
 <div class="row">
@@ -217,6 +217,7 @@
     #main-content {
         background-color: #fff;
         padding: 35px 30px;
+        min-height: 600px;
     }
     .side-select {
         background-color: #26375c;
