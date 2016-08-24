@@ -218,6 +218,7 @@
 <style>
     body {
         background: url('/images/page-bg.png') repeat;
+        text-shadow: 0 0 1px;
     }
     #main-content {
         background-color: #fff;
@@ -236,20 +237,23 @@
         margin-bottom: 15px;
         border-top: 1px solid #636f8a;
         border-bottom: #e0e2e8;
-        0 0 1px #d4d4d4;
-
+        text-shadow: 0 0 1px #d4d4d4;
+        /*font-family: 'Source Sans Pro', sans-serif;*/
+        font-size: 15px;
+        font-weight: 100 !important;
     }
     .select-caret {
-        /*margin-top: 11px;*/
         margin-left: -50px;
     }
     .side-select[disabled] {
-        /*background-color: #677ead;*/
         color: #949494;
+        text-shadow: none;
     }
     .nav-pills>li {
         width: 33%;
-
+        text-align: center;
+        font-size: 15px;
+        font-weight: 200 !important;
     }
     .nav-pills>li>a {
         background-color: #eee;
@@ -257,12 +261,16 @@
         margin-left: 2%;
         margin-right: 2%;
         color: #27375d;
+        text-shadow: 0 0 1px #d4d4d4;
     }
     .nav-pills>li.active>a, .nav-pills>li.active>a:active, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
         background-color: #fe9c2f;
+        text-shadow: none;
     }
     h4 {
         color: #27375d;
+        font-weight: 200 !important;
+        margin-bottom: 25px;
     }
     .rec {
         width: 100%;
@@ -278,6 +286,9 @@
     }
     .rec-description {
         background-color: #eee;
+    }
+    .tab-content {
+        color: #666;
     }
     .rec td {
         padding: 10px;
