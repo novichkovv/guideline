@@ -35,6 +35,7 @@
     <script src="<?php echo SITE_DIR; ?>assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
     <script src="<?php echo SITE_DIR; ?>assets/global/plugins/datatables/all.min.js" type="text/javascript"></script>
     <script src="<?php echo SITE_DIR; ?>assets/global/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+    <script src="<?php echo SITE_DIR; ?>js/main.min.js" type="text/javascript"></script>
     <script src="<?php echo SITE_DIR; ?>js/notifier.js" type="text/javascript"></script>
     <?php if ($scripts): ?>
         <?php foreach ($scripts as $script): ?>
