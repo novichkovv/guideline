@@ -13,7 +13,7 @@
                     <h4><?php echo $topic['topic_name']; ?></h4>
                     <?php echo $content['answer']; ?>
                     <?php if ($content['table_image']): ?>
-                        <img src="<?php echo SITE_DIR; ?>images/<?php echo $content['table_image']; ?>">
+                        <img class="table_image" src="<?php echo SITE_DIR; ?>images/<?php echo $content['table_image']; ?>">
                     <?php endif; ?>
                 </div>
             </div>
